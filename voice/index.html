@@ -54,7 +54,7 @@
 			var wh = w / h;
 			//设置视频显示尺寸
 
-			if (screenWidth > w) {
+			if (document.documentElement.clientHeight < document.documentElement.clientWidth) {
 				vid.style.width = s * w + "px";
 				vid.style.height = s * h + "px";
 				vid2.style.paddingTop = (s * h - 20) / 2 + "px";
