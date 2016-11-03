@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+#v {
+	width: 720px;
+	height: 550px;
+	margin: 50px auto;
+	box-shadow: 0 0 20px #fff;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.bo ul {
+	text-align: center;
+	width: 100%;
+}
+
+.bo li {
+	position: relative;
+	background-color: lemonchiffon;
+	width: 5px;
+	height: 10px;
+	margin: 250px 20px;
+	display: inline-block;
+}
+
+.bo li:nth-child(1) {
+	-webkit-animation: hv1 1s linear infinite;
+	background-color: aqua;
+}
+
+.bo li:nth-child(2) {
+	-webkit-animation: hv1 1s linear infinite 0.1s;
+	background-color: blueviolet;
+}
+
+.bo li:nth-child(3) {
+	-webkit-animation: hv1 1s linear infinite 0.2s;
+	background-color: chartreuse;
+}
+
+.bo li:nth-child(4) {
+	-webkit-animation: hv1 1s linear infinite;
+	background-color: burlywood;
+}
+
+.bo li:nth-child(5) {
+	-webkit-animation: hv1 1s linear infinite 0.1s;
+	background-color: cyan;
+}
+
+.bo li:nth-child(6) {
+	-webkit-animation: hv1 1s linear infinite 0.2s;
+	background-color: fuchsia;
+}
+
+.bo li:nth-child(7) {
+	-webkit-animation: hv1 1s linear infinite;
+	background-color: darkorange;
+}
+
+.bo li:nth-child(8) {
+	-webkit-animation: hv1 1s linear infinite 0.1s;
+	background-color: fuchsia;
+}
+
+.bo li:nth-child(9) {
+	-webkit-animation: hv1 1s linear infinite 0.1s;
+	background-color: darkorange;
+}
+
+@-webkit-keyframes hv1 {
+	0% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(20);
+		background-color: fuchsia;
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}

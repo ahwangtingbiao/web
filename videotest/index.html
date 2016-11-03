@@ -55,11 +55,17 @@
 			//视频宽高比
 			var wh = w / h;
 			//设置视频显示尺寸
-			vid.setAttribute("width", s * screenWidth);
-			vid.setAttribute("height", s * screenWidth / wh);
 
+			if (screenWidth > w) {
+				vid.setAttribute("width", s * w);
+				vid.setAttribute("height", s * h);
+			} else {
+				vid.setAttribute("width", s * screenWidth);
+				vid.setAttribute("height", s * screenWidth / wh);
+			}
 
 		}
+
 		setVideoSize('myvideo', 960, 400, 0.9);
 
 	</script>
