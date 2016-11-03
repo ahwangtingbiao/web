@@ -10,7 +10,7 @@
 
 <body>
 	<div id="v">
-		<ul class="bo">
+		<ul class="bo" id="yb">
 			<li>
 			</li>
 			<li>
@@ -42,6 +42,33 @@
 
 		</ul>
 	</div>
+
+	<script>
+		function setVideoSize(id, id2, w, h, s) {
+			//获取对象
+			var vid = document.getElementById(id);
+			var vid2 = document.getElementById(id2);
+			//取得浏览器页面可视区域的宽度
+			var screenWidth = document.documentElement.clientWidth;
+			//视频宽高比
+			var wh = w / h;
+			//设置视频显示尺寸
+
+			if (screenWidth > w) {
+				vid.style.width = s * w + "px";
+				vid.style.height = s * h + "px";
+				vid2.style.paddingTop = (s * h - 20) / 2 + "px";
+			} else {
+				vid.style.width = s * screenWidth + "px";
+				vid.style.height = s * screenWidth / wh + "px";
+				vid2.style.paddingTop = (s * screenWidth / wh - 20) / 2 + "px";
+			}
+
+		}
+
+		setVideoSize('v', 'yb', 720, 550, 0.8);
+
+	</script>
 </body>
 
 </html>
