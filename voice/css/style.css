@@ -1,17 +1,41 @@
 * {
 	margin: 0;
 	padding: 0;
-	background-color: #000;
 	overflow-x: hidden;
+}
+
+body {
+	background-color: #000;
+	-webkit-animation: bgc 15s linear infinite;
+}
+
+@-webkit-keyframes bgc {
+	0% {
+		background-color: black;
+	}
+	25% {
+		background-color: brown;
+	}
+	50% {
+		background-color: darkgreen;
+	}
+	50% {
+		background-color: midnightblue;
+	}
+	100% {
+		background-color: black;
+	}
 }
 
 #v {
 	width: 720px;
 	height: 550px;
 	margin: 50px auto;
-	box-shadow: 0 0 20px #fff;
-	border-radius: 20px;
+	box-shadow: 0 0 30px black;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
 	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5)
 }
 
 .bo ul {
@@ -24,53 +48,29 @@
 	background-color: lemonchiffon;
 	width: 5px;
 	height: 10px;
-	margin: 250px 20px;
+	margin: 250px 10px;
 	display: inline-block;
+	border-radius: 100%;
 }
 
-.bo li:nth-child(1) {
+.bo li:nth-child(n) {
 	-webkit-animation: hv1 1s linear infinite;
 	background-color: aqua;
 }
 
-.bo li:nth-child(2) {
+.bo li:nth-child(2n) {
 	-webkit-animation: hv1 1s linear infinite 0.1s;
 	background-color: blueviolet;
 }
 
-.bo li:nth-child(3) {
+.bo li:nth-child(3n) {
 	-webkit-animation: hv1 1s linear infinite 0.2s;
 	background-color: chartreuse;
 }
 
-.bo li:nth-child(4) {
-	-webkit-animation: hv1 1s linear infinite;
-	background-color: burlywood;
-}
-
-.bo li:nth-child(5) {
-	-webkit-animation: hv1 1s linear infinite 0.1s;
-	background-color: cyan;
-}
-
-.bo li:nth-child(6) {
-	-webkit-animation: hv1 1s linear infinite 0.2s;
-	background-color: fuchsia;
-}
-
-.bo li:nth-child(7) {
-	-webkit-animation: hv1 1s linear infinite;
-	background-color: darkorange;
-}
-
-.bo li:nth-child(8) {
-	-webkit-animation: hv1 1s linear infinite 0.1s;
-	background-color: fuchsia;
-}
-
-.bo li:nth-child(9) {
-	-webkit-animation: hv1 1s linear infinite 0.1s;
-	background-color: darkorange;
+.bo li:nth-child(4n) {
+	-webkit-animation: hv1 1s linear infinite 0.3s;
+	background-color: coral;
 }
 
 @-webkit-keyframes hv1 {
@@ -78,7 +78,7 @@
 		transform: scaleY(1);
 	}
 	50% {
-		transform: scaleY(20);
+		transform: scaleY(30);
 		background-color: fuchsia;
 	}
 	100% {
