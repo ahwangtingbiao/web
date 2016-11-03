@@ -6,10 +6,67 @@
 
 body {
 	background-color: #000;
+	animation: bgc 15s linear infinite;
 	-webkit-animation: bgc 15s linear infinite;
+	-o-animation: bgc 15s linear infinite;
+	-moz-animation: bgc 15s linear infinite;
+}
+
+@keyframes bgc {
+	0% {
+		background-color: black;
+	}
+	25% {
+		background-color: brown;
+	}
+	50% {
+		background-color: darkgreen;
+	}
+	50% {
+		background-color: midnightblue;
+	}
+	100% {
+		background-color: black;
+	}
 }
 
 @-webkit-keyframes bgc {
+	0% {
+		background-color: black;
+	}
+	25% {
+		background-color: brown;
+	}
+	50% {
+		background-color: darkgreen;
+	}
+	50% {
+		background-color: midnightblue;
+	}
+	100% {
+		background-color: black;
+	}
+}
+
+@-moz-keyframes bgc {
+	0% {
+		background-color: black;
+	}
+	25% {
+		background-color: brown;
+	}
+	50% {
+		background-color: darkgreen;
+	}
+	50% {
+		background-color: midnightblue;
+	}
+	100% {
+		background-color: black;
+	}
+}
+
+@-o-keyframes bgc {
 	0% {
 		background-color: black;
 	}
@@ -54,26 +111,77 @@ body {
 }
 
 .bo li:nth-child(n) {
+	animation: hv1 1s linear infinite;
 	-webkit-animation: hv1 1s linear infinite;
+	-moz-animation: hv1 1s linear infinite;
+	-o-animation: hv1 1s linear infinite;
 	background-color: aqua;
 }
 
 .bo li:nth-child(2n) {
+	animation: hv1 1s linear infinite 0.1s;
 	-webkit-animation: hv1 1s linear infinite 0.1s;
+	-moz-animation: hv1 1s linear infinite 0.1s;
+	-o-animation: hv1 1s linear infinite 0.1s;
 	background-color: blueviolet;
 }
 
 .bo li:nth-child(3n) {
+	animation: hv1 1s linear infinite 0.2s;
 	-webkit-animation: hv1 1s linear infinite 0.2s;
+	-moz-animation: hv1 1s linear infinite 0.2s;
+	-o-animation: hv1 1s linear infinite 0.2s;
 	background-color: chartreuse;
 }
 
 .bo li:nth-child(4n) {
+	animation: hv1 1s linear infinite 0.3s;
 	-webkit-animation: hv1 1s linear infinite 0.3s;
+	-moz-animation: hv1 1s linear infinite 0.3s;
+	-o-animation: hv1 1s linear infinite 0.3s;
 	background-color: coral;
 }
 
+@keyframes hv1 {
+	0% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(30);
+		background-color: fuchsia;
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
 @-webkit-keyframes hv1 {
+	0% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(30);
+		background-color: fuchsia;
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@-moz-keyframes hv1 {
+	0% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(30);
+		background-color: fuchsia;
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@-o-keyframes hv1 {
 	0% {
 		transform: scaleY(1);
 	}
