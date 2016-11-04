@@ -1,8 +1,8 @@
-//VIV适配
+//DIV适配
 function setSize(e1, e2, w, h, s) {
 	//获取对象
-	var e1 = document.getElementById(id);
-	var e2 = document.getElementById(id2);
+	var e1 = document.getElementById(e1);
+	var e2 = document.getElementById(e2);
 	//取得浏览器页面可视区域的宽度
 	var screenWidth = document.documentElement.clientWidth;
 	//取得浏览器页面可视区域的高度
@@ -24,9 +24,14 @@ function setSize(e1, e2, w, h, s) {
 }
 
 //网页缩放
-
 function zoom(s) {
 	//取得浏览器页面可视区域的宽度
+	var screenHeight = document.documentElement.clientHeight;
+	//取得浏览器页面可视区域的宽度
 	var screenWidth = document.documentElement.clientWidth;
-	document.body.style.zoom = screenWidth / s;
+	if (screenHeight > screenWidth) {
+		document.body.style.zoom = screenWidth / s;
+
+	}
+
 }
