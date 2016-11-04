@@ -105,8 +105,8 @@ body {
 .bo li {
 	position: relative;
 	background-color: lemonchiffon;
-	width: 0.5%;
-	height: 10px;
+	width: 1%;
+	height: 2.5%;
 	margin-left: 10px;
 	margin-right: 10px;
 	display: inline-block;
