@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 1);
     /*
 	animation: bgc 15s linear infinite;
 	-webkit-animation: bgc 15s linear infinite;
@@ -94,7 +94,7 @@ body {
     left: 50%;
     margin-left: -360px;
     margin-top: -275px;
-    box-shadow: 0 0 30px black;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     text-align: center;
