@@ -47,7 +47,7 @@ body {
 	margin-left: -82px;
 	margin-top: -82px;
 	border-radius: 100%;
-	border: dashed 2px #0000ff;
+	border: dashed 4px #ffaaff;
 	animation: xz linear 4s infinite;
 	z-index: 6;
 }
