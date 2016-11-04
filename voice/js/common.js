@@ -35,3 +35,11 @@ function zoom(s) {
 	}
 
 }
+
+//添加class
+function myAddClass(e, cl) {
+	//获取对象
+	var e = document.getElementById(e);
+	var cuclass = e.getAttribute("class");
+	e.setAttribute("class", cuclass + " " + cl);
+}

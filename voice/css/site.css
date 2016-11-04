@@ -22,12 +22,17 @@ body {
 	width: 400px;
 	height: 400px;
 	margin: 0 auto;
+	transition: transform 1s;
+}
+
+.bx {
 	transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg);
 }
 
 .box {
 	position: absolute;
 	left: 50%;
+	transition: margin-left 1s linear, margin-top 1s linear;
 }
 
 .b1 {
@@ -37,40 +42,60 @@ body {
 	margin-top: -25px;
 	border-radius: 100%;
 	background-color: aqua;
-	transform: translate(-60px, -60px);
 	z-index: 7;
+}
+
+.b1wy {
+	margin-left: -105px;
+	margin-top: -105px;
 }
 
 .b2 {
 	width: 100px;
 	height: 100px;
-	margin-left: -82px;
-	margin-top: -82px;
+	margin-left: -52px;
+	margin-top: -52px;
 	border-radius: 100%;
 	border: dashed 4px #ffaaff;
-	animation: xz linear 4s infinite;
+	animation: fxz linear 4s infinite 0.2s;
 	z-index: 6;
+}
+
+.b2wy {
+	margin-left: -112px;
+	margin-top: -112px;
 }
 
 .b3 {
 	width: 200px;
 	height: 200px;
-	margin-left: -130px;
-	margin-top: -130px;
+	margin-left: -110px;
+	margin-top: -110px;
 	border-radius: 100%;
 	border: dashed 10px #00ff00;
-	animation: xz linear 3s infinite;
+	animation: xz linear 3s infinite 0.2s;
 	z-index: 5;
+}
+
+.b3wy {
+	margin-left: -150px;
+	margin-top: -150px;
 }
 
 .b4 {
 	width: 300px;
 	height: 300px;
-	margin-left: -170px;
-	margin-top: -170px;
+	margin-left: -160px;
+	margin-top: -160px;
 	border-radius: 100%;
-	border: solid 10px #ff00ff;
+	border: dotted 10px #ff00ff;
+	animation: xz linear 3s infinite 0.2s;
 	z-index: 4;
+}
+
+.b4wy {
+	margin-left: -180px;
+	margin-top: -180px;
 }
 
 .b5 {
@@ -107,7 +132,7 @@ body {
 }
 
 
-/*旋转*/
+/*顺时针旋转*/
 
 @-webkit-keyframes xz {
 	from {
@@ -119,15 +144,31 @@ body {
 }
 
 
+/*逆时针旋转*/
+
+@-webkit-keyframes fxz {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+
 /*放大*/
 
 @-webkit-keyframes fd {
-	from {
+	0% {
 		transform: scale(1) translate(0px, 0px);
 		opacity: 1;
 	}
-	to {
-		transform: scale(3) translate(300px, 300px);
+	60% {
+		transform: scale(1.5) translate(180px, 180px);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(2.5) translate(300px, 300px);
 		opacity: 0;
 	}
 }

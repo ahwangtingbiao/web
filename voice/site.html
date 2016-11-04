@@ -11,14 +11,15 @@
 
 <body>
 	<div id="container">
-		<div id="box">
-			<div class="box b1"></div>
-			<div class="box b2"></div>
-			<div class="box b3"></div>
-			<div class="box b4"></div>
-			<div class="box b5"></div>
-			<div class="box b6"></div>
-			<div class="box b7"></div>
+		<div id="box" class="y">
+			<div id="box1" class="box b1"></div>
+			<div id="box2" class="box b2"></div>
+			<div id="box3" class="box b3"></div>
+			<div id="box4" class="box b4"></div>
+			<div id="box5" class="box b5"></div>
+			<div id="box6" class="box b6"></div>
+			<div id="box7" class="box b7"></div>
+
 		</div>
 
 	</div>
@@ -26,6 +27,14 @@
 
 	<script src="js/common.js"></script>
 	<script>
+		setTimeout(function() {
+			myAddClass("box", "bx");
+			myAddClass("box4", "b4wy");
+			myAddClass("box3", "b3wy");
+			myAddClass("box2", "b2wy");
+			myAddClass("box1", "b1wy");
+		}, 1)
+
 		zoom(720);
 
 	</script>
