@@ -150,8 +150,7 @@ body {
 		transform: scaleY(1);
 	}
 	50% {
-		transform: scaleY(30);
-		/*		background-color: fuchsia;*/
+		transform: scaleY(25);
 	}
 	100% {
 		transform: scaleY(1);
@@ -163,8 +162,7 @@ body {
 		transform: scaleY(1);
 	}
 	50% {
-		transform: scaleY(30);
-		/*		background-color: fuchsia;*/
+		transform: scaleY(25);
 	}
 	100% {
 		transform: scaleY(1);
@@ -176,8 +174,7 @@ body {
 		transform: scaleY(1);
 	}
 	50% {
-		transform: scaleY(30);
-		/*		background-color: fuchsia;*/
+		transform: scaleY(25);
 	}
 	100% {
 		transform: scaleY(1);
@@ -189,8 +186,7 @@ body {
 		transform: scaleY(1);
 	}
 	50% {
-		transform: scaleY(30);
-		/*		background-color: fuchsia;*/
+		transform: scaleY(25);
 	}
 	100% {
 		transform: scaleY(1);
