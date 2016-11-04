@@ -1,4 +1,4 @@
-//屏幕适配
+//VIV适配
 function setSize(e1, e2, w, h, s) {
 	//获取对象
 	var e1 = document.getElementById(id);
@@ -21,4 +21,12 @@ function setSize(e1, e2, w, h, s) {
 		e1.style.marginTop = (screenHeight - s * screenWidth / wh) / 2 + "px";
 		e2.style.paddingTop = (s * screenWidth / wh - 20) / 2 + "px";
 	}
+}
+
+//网页缩放
+
+function zoom(s) {
+	//取得浏览器页面可视区域的宽度
+	var screenWidth = document.documentElement.clientWidth;
+	document.body.style.zoom = screenWidth / s;
 }
