@@ -2,72 +2,55 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>炫彩音波</title>
-
-	<link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="keywords" content="keywords" />
+	<meta name="description" content="description" />
+	<meta name="copyright" content="copyright" />
+	<meta name="author" content="author" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>首页</title>
+	<link rel="stylesheet" href="bs3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-	<div id="v">
-		<ul class="bo" id="yb">
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" title="还没做好">LOGO</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="http://www.weibo.com/522239219" title="关注我微博吧">关注我</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
 
+		<ul class="nav nav-pills nav-stacked" role="tablist">
+			<li role="presentation" class="active"><a href="#">首页</a></li>
+			<li role="presentation"><a href="voice.html">讯飞语音动画示例</a></li>
+			<li role="presentation"><a href="voice.html">讯飞官网动画示例</a></li>
+			<li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown">更多...<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">稍后...</a></li>
+					<li class="divider"></li>
+					<li><a href="#">更多...</a></li>
+				</ul>
+			</li>
 		</ul>
+
 	</div>
 
-	<script>
-		function setVideoSize(id, id2, w, h, s) {
-			//获取对象
-			var vid = document.getElementById(id);
-			var vid2 = document.getElementById(id2);
-			//取得浏览器页面可视区域的宽度
-			var screenWidth = document.documentElement.clientWidth;
-			//视频宽高比
-			var wh = w / h;
-			//设置显示尺寸
-			if (document.documentElement.clientHeight < document.documentElement.clientWidth) {
-				vid.style.width = s * w + "px";
-				vid.style.height = s * h + "px";
-				vid2.style.paddingTop = (s * h - 20) / 2 + "px";
-				vid.style.marginTop = (document.documentElement.clientHeight - s * h) / 2 + "px";
-			} else {
-				vid.style.width = s * screenWidth + "px";
-				vid.style.height = s * screenWidth / wh + "px";
-				vid.style.marginTop = (document.documentElement.clientHeight - s * screenWidth / wh) / 2 + "px";
-				vid2.style.paddingTop = (s * screenWidth / wh - 20) / 2 + "px";
-			}
-		}
-		setVideoSize('v', 'yb', 720, 550, 0.9);
 
-	</script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="bs3/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
