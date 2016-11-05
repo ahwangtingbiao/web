@@ -22,17 +22,38 @@ body {
     width: 400px;
     height: 400px;
     margin: 0 auto;
+    /*
+    perspective: 500;
+    -webkit-perspective: 500;
+*/
     transition: transform 1s;
+    /* Firefox 4 */
+    -moz-transition: transform 1s;
+    /* Safari 和 Chrome */
+    -webkit-transition: transform 1s;
+    /* Opera */
+    -o-transition: transform 1s;
 }
 
 .bx {
     transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg);
+    /* IE 9 */
+    -ms-transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg);
+    /* Safari and Chrome */
+    -webkit-transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg);
+    /* Opera */
+    -o-transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg);
+    /* Firefox */
+    -moz-transform: rotateX(45deg) rotateY(-50deg) rotateZ(0deg));
 }
 
 .box {
     position: absolute;
     left: 50%;
     transition: margin-left 1s linear, margin-top 1s linear;
+    -moz-transition: margin-left 1s linear, margin-top 1s linear;
+    -webkit-transition: margin-left 1s linear, margin-top 1s linear;
+    -o-transition: margin-left 1s linear, margin-top 1s linear;
 }
 
 .b1 {
@@ -46,8 +67,8 @@ body {
 }
 
 .b1wy {
-    margin-left: -105px;
-    margin-top: -105px;
+    margin-left: -115px;
+    margin-top: -115px;
 }
 
 .b2 {
@@ -65,8 +86,8 @@ body {
 }
 
 .b2wy {
-    margin-left: -112px;
-    margin-top: -112px;
+    margin-left: -122px;
+    margin-top: -122px;
 }
 
 .b3 {
@@ -150,37 +171,37 @@ body {
 /*顺时针旋转*/
 
 @-webkit-keyframes xz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
     }
 }
 
 @-o-keyframes xz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
     }
 }
 
 @-moz-keyframes xz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
     }
 }
 
 @keyframes xz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -189,37 +210,37 @@ body {
 /*逆时针旋转*/
 
 @-webkit-keyframes fxz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(-360deg);
     }
 }
 
 @-o-keyframes fxz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(-360deg);
     }
 }
 
 @-moz-keyframes fxz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(-360deg);
     }
 }
 
 @keyframes fxz {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(-360deg);
     }
 }
