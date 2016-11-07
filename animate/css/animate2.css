@@ -5,17 +5,16 @@
 
 body {
 	background-color: #000;
+	overflow: hidden;
 }
 
 #container {
 	width: 100%;
 	height: auto;
-	padding-top: 20%;
-	margin-left: auto;
-	margin-right: auto;
+	top: 50%;
+	margin-top: -100px;
 	text-align: center;
-	position: relative;
-	overflow: hidden;
+	position: absolute;
 }
 
 #box {
