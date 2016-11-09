@@ -53,6 +53,11 @@ textarea {
 	color: #888;
 }
 
+label {
+	font-size: 12px;
+	color: #888;
+}
+
 .footer {
 	width: 100%;
 	position: fixed;
