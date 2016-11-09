@@ -1,41 +1,5 @@
 <?php
- 
- //创建文件夹
- function createDir($aimUrl) {
-        $aimUrl = str_replace('', '/', $aimUrl);
-        $aimDir = '';
-        $arr = explode('/', $aimUrl);
-        $result = true;
-        foreach ($arr as $str) {
-            $aimDir .= $str . '/';
-            if (!file_exists($aimDir)) {
-                $result = mkdir($aimDir);
-            }
-        }
-        return $result;
-    }
-	
- // 删除文件夹 
-function deldir($dir) {
-  $dh=opendir($dir);
-  while ($file=readdir($dh)) {
-    if($file!="." && $file!="..") {
-      $fullpath=$dir."/".$file;
-      if(!is_dir($fullpath)) {
-          unlink($fullpath);
-      } else {
-          deldir($fullpath);
-      }
-    }
-  }
-  closedir($dh);
-  //删除当前文件夹：
-  if(rmdir($dir)) {
-    return true;
-  } else {
-    return false;
-  }
-}
+include('inc/function.php');
 
 //uuid生成
 function guid(){
@@ -103,7 +67,9 @@ if($_POST['password']=='admin')
 
 
 //数据处理开始
-$num = $_POST['num'];//表情个数
+//$num = $_POST['num'];//表情个数
+include('config.php');//表情上传临时目录
+$num = count(scandir($updir))-2;
 $name = $_POST['name'];
 $version = $_POST['version'];
 $description = $_POST['description'];
@@ -215,6 +181,7 @@ $qqdir_land = $expdir.'/templet/layout_land/';
 $qqres = $expdir.'/templet/res/';
 $wxdir = $expdir.'/templet_mm/layout/';
 $wxdir_land = $expdir.'/templet_mm/layout_land/';
+
 createDir($qqdir);//创建目录
 createDir($qqdir_land);//创建目录
 createDir($qqres);//创建目录
@@ -225,7 +192,8 @@ write_ini_file($qq_expression_land, $qqdir_land.'expression.ini', true);
 write_ini_file($wx_expression, $wxdir.'expression.ini', true);
 write_ini_file($wx_expression_land, $wxdir_land.'expression.ini', true);
 write_ini_file($info,$expdir.'/info.ini', true);
-
+recurse_copy($updir,$qqres);
+recurse_copy($updir_pre,$expdir);
 
 $exportPath = $rootdir;//设置需要打包的目录
 $filename =$rootdir.".exp";//设置压缩包的文件名
