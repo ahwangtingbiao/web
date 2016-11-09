@@ -6,6 +6,7 @@
 body {
 	font-family: '微软雅黑', '宋体';
 	font-size: 14px;
+	color: #666;
 }
 
 #container {
@@ -18,7 +19,7 @@ body {
 .table {
 	width: auto;
 	margin: 0% auto;
-	border: 1px solid #ccc;
+	border: 1px solid rgba(100, 149, 237, 0.5);
 	padding: 20px;
 	box-shadow: 0 0 30px #ccc;
 	border-radius: 8px;
@@ -45,9 +46,11 @@ body {
 
 input,
 textarea {
+	font-size: 12px;
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	color: #888;
 }
 
 .footer {
@@ -55,4 +58,5 @@ textarea {
 	position: fixed;
 	bottom: 0px;
 	padding: 10px;
+	color: gray;
 }
