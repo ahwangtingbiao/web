@@ -54,7 +54,7 @@ function guid(){
     }
 }
 
- //写入配置
+ //写入配置ini
  function write_ini_file($assoc_arr, $path, $has_sections=FALSE) { 
     $content = ""; 
     if ($has_sections) { 
@@ -65,11 +65,11 @@ function guid(){
                 { 
                     for($i=0;$i<count($elem2);$i++) 
                     { 
-                        $content .= $key2."[] = ".$elem2[$i]."\n";
+                        $content .= $key2."[]=".$elem2[$i]."\n";
                     } 
                 }
                 else if($elem2=="") $content .= $key2." = \n"; 
-                else $content .= $key2." = ".$elem2."\n"; 
+                else $content .= $key2."=".$elem2."\n"; 
             } 
         } 
     } 
@@ -83,7 +83,7 @@ function guid(){
                 } 
             } 
             else if($elem=="") $content .= $key2." = n"; 
-            else $content .= $key2." = ".$elem."\n"; 
+            else $content .= $key2."=".$elem."\n"; 
         } 
     }
     if (!$handle = fopen($path, 'w')) { 
@@ -97,25 +97,24 @@ function guid(){
 }
 
 
-//校验开始
+//密码校验开始
 if($_POST['password']=='iflytek*#06#')
 {
 
 
 //数据处理开始
 $num = $_POST['num'];//表情个数
-$type = $_POST['type'];//表情类型
 $name = $_POST['name'];
+$version = $_POST['version'];
+$description = $_POST['description'];
+$author =  $_POST['author'];
+$type = $_POST['type'];//表情类型
 if(!$_POST['uid'])
 {
 $uid = guid();	
 }else{
 $uid=$_POST['uid'];
 }
-
-$version = $_POST['version'];
-$description = $_POST['description'];
-
 switch($type){
 	case 'dynamic':
 	$_EXPRESSION_TYPE_QQ = "7";//QQGIF类型
@@ -190,7 +189,7 @@ $wx_expression_land = array(
 $info = array(
                 'INFO' => array(
                     'PLATFORM' => 'android',
-                    'VERSION' => $varsion,
+                    'VERSION' => $version,
                     'NAME' => $name,
                     'AUTHOR' => $author,                
                     'PREVIEW' => 'preview',                
@@ -240,12 +239,13 @@ unlink($filename);//删除文件
 delDir($rootdir);//删除目录
 
 //数据处理结束
+
 	
 }else{
 	echo '<script>alert("对不起，您输入的密码不正确！");
 	window.history.go(-1);
 	</script>';
 }
-//校验结束
+//密码校验结束
 
 ?>
