@@ -31,7 +31,6 @@ body {
 .pack {
 	width: 120px;
 	height: 36px;
-	border: 1px solid #fff;
 	box-shadow: 0 0 5px #ccc;
 	border-radius: 8px;
 	background-color: cornflowerblue;
@@ -40,6 +39,7 @@ body {
 
 .pack:hover {
 	color: #fff;
+	border: 1px solid #fff;
 	background-color: forestgreen;
 }
 
@@ -54,4 +54,5 @@ textarea {
 	width: 100%;
 	position: fixed;
 	bottom: 0px;
+	padding: 10px;
 }

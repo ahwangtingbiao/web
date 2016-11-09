@@ -96,7 +96,13 @@ function guid(){
     return true; 
 }
 
-//写入
+
+//校验开始
+if($_POST['password']=='iflytek*#06#')
+{
+
+
+//数据处理开始
 $num = $_POST['num'];//表情个数
 $type = $_POST['type'];//表情类型
 $name = $_POST['name'];
@@ -233,11 +239,13 @@ include('pack.php');//开始打包并下载
 unlink($filename);//删除文件
 delDir($rootdir);//删除目录
 
-
-//读取配置
-/* $info = parse_ini_file("temp/info.ini",true);
- if($info){
- echo  "名称：".$info['INFO']['NAME']."<br>";
- } */
+//数据处理结束
+	
+}else{
+	echo '<script>alert("对不起，您输入的密码不正确！");
+	window.history.go(-1);
+	</script>';
+}
+//校验结束
 
 ?>
