@@ -1,4 +1,4 @@
-<?php 
+<?php
  
  //创建文件夹
  function createDir($aimUrl) {
@@ -98,7 +98,7 @@ function guid(){
 
 
 //密码校验开始
-if($_POST['password']=='iflytek*#06#')
+if($_POST['password']=='admin')
 {
 
 
@@ -109,12 +109,7 @@ $version = $_POST['version'];
 $description = $_POST['description'];
 $author =  $_POST['author'];
 $type = $_POST['type'];//表情类型
-if(!$_POST['uid'])
-{
-$uid = guid();	
-}else{
-$uid=$_POST['uid'];
-}
+if(!$_POST['uid']){$uid = guid();}else{$uid=$_POST['uid'];}
 switch($type){
 	case 'dynamic':
 	$_EXPRESSION_TYPE_QQ = "7";//QQGIF类型
@@ -163,7 +158,6 @@ if($type='dynamic'){
   }
 }
 
-
 				
 $qq_expression_land = array(		
 				'EXPRESSION' => array(
@@ -211,7 +205,10 @@ $info = array(
                     'SUPPORT_VERSION_MIN' => '0',      
                 ));
 
-$rootdir = date("YmdHis");
+include('getpinyin.php');
+$rootdir = get_pinyin($name).date(m);//导出的表情包包名转为表情名称的拼音
+
+//$rootdir = date("YmdHis");
 $expdir = $rootdir.'/'.$rootdir;
 $qqdir = $expdir.'/templet/layout/';
 $qqdir_land = $expdir.'/templet/layout_land/';
