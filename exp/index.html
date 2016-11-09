@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>讯飞输入法表情在线打包工具</title>
+	<link rel="icon" href="http://www.xunfei.cn/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.xunfei.cn/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="container">
+		<form name="expform" method="post" action="exp.php">
+			<table class="table">
+				<tr>
+					<td>类型：</td>
+					<td>
+						<label>
+							<input name="type" type="radio" value="static" checked />静态PNG</label>
+						<label>
+							<input name="type" type="radio" value="dynamic" />动态GIF</label>
+					</td>
+				</tr>
+				<tr>
+					<td>数量：</td>
+					<td>
+						<input type="number" name="num" max="72" required="required" value="16" />
+					</td>
+				</tr>
+				<tr>
+					<td>名称：</td>
+					<td>
+						<input type="text" name="name" required="required" value="8个汉字以内" />
+					</td>
+				</tr>
+				<tr>
+					<td>作者：</td>
+					<td>
+						<input type="text" name="name" required="required" value="10个汉字以内" />
+					</td>
+				</tr>
+				<tr>
+					<td>版本：</td>
+					<td>
+						<input type="number" name="version" required="required" value="1.5" />
+					</td>
+				</tr>
+				<tr>
+					<td>ID：</td>
+					<td>
+						<input type="text" name="uid" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>描述：</td>
+					<td>
+						<textarea name="description" required="required" rows="3" cols="22">80个汉字以内，充分体现表情的形象特色或故事情节</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<br>
+						<input class="pack" type="submit" name="button" value="打包" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div id="footer" class="footer">
+		<i><span>Alpha-0.0.1</span> by godBiao</i>
+	</div>
+</body>
+
+</html>
