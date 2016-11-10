@@ -1,4 +1,21 @@
 <?php
+
+//uuid生成
+function guid(){
+    if (function_exists('com_create_guid')){
+        return com_create_guid();
+    }else{
+        mt_srand((double)microtime()*10000);
+        $charid = md5(uniqid(rand(), true));
+        $hyphen = chr(45);// "-"
+        $uuid = substr($charid, 0, 8).$hyphen
+                .substr($charid, 8, 4).$hyphen
+                .substr($charid,12, 4).$hyphen
+                .substr($charid,16, 4).$hyphen
+                .substr($charid,20,12);
+        return $uuid;
+    }
+}
  
  //创建文件夹
  function createDir($aimUrl) {
@@ -72,6 +89,47 @@ function recurse_copy($src,$des) {
     
      closedir($dir);
    }
-   
+ 
+ //写入配置ini
+function write_ini_file($assoc_arr, $path, $has_sections=FALSE) { 
+    $content = ""; 
+    if ($has_sections) { 
+        foreach ($assoc_arr as $key=>$elem) { 
+            $content .= "\n[".$key."]\n"; 
+            foreach ($elem as $key2=>$elem2) { 
+                if(is_array($elem2)) 
+                { 
+                    for($i=0;$i<count($elem2);$i++) 
+                    { 
+                        $content .= $key2."[]=".$elem2[$i]."\n";
+                    } 
+                }
+                else if($elem2=="") $content .= $key2." = \n"; 
+                else $content .= $key2."=".$elem2."\n"; 
+            } 
+        } 
+    } 
+    else { 
+        foreach ($assoc_arr as $key=>$elem) { 
+            if(is_array($elem)) 
+            { 
+                for($i=0;$i<count($elem);$i++) 
+                { 
+                    $content .= $key2."[] = ".$elem[$i]."\n"; 
+                } 
+            } 
+            else if($elem=="") $content .= $key2." = n"; 
+            else $content .= $key2."=".$elem."\n"; 
+        } 
+    }
+    if (!$handle = fopen($path, 'w')) { 
+        return false; 
+    } 
+    if (!fwrite($handle, $content)) { 
+        return false; 
+    } 
+    fclose($handle); 
+    return true; 
+}
 
 ?>

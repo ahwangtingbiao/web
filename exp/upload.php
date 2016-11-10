@@ -1,5 +1,7 @@
 <?php
-include('config.php');
+$updir = 'tmp/up/';//定义表情主图上传目录
+$updir_pre = 'tmp/up_pre/';//定义聊天面板图目录
+ 
 
 if (isset($_FILES["Filedata"]) || !is_uploaded_file($_FILES["Filedata"]["tmp_name"]) || $_FILES["Filedata"]["error"] != 0) { 
     $upload_file = $_FILES['Filedata']; 
