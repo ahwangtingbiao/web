@@ -9,6 +9,43 @@ body {
 	color: #666;
 }
 
+.header {
+	color: rgba(0, 0, 255, 0.5);
+	width: 1080px;
+	text-align: center;
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	margin-left: -540px;
+	-webkit-animation: aheader 20s linear infinite;
+}
+
+@-webkit-keyframes aheader {
+	0% {
+		top: 0px;
+	}
+	25% {
+		top: 0px;
+	}
+	48% {
+		top: 0px;
+		color: rgba(0, 0, 255, 0.5);
+	}
+	49% {
+		top: 10px;
+		color: red;
+	}
+	50% {
+		top: -500px;
+	}
+	75% {
+		top: 0px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
 #container {
 	width: 1080px;
 	height: auto;
@@ -21,6 +58,7 @@ body {
 	width: 540px;
 	float: left;
 	overflow: hidden;
+	margin-right: -90px;
 }
 
 .info {
@@ -37,6 +75,16 @@ body {
 	width: 65px;
 	height: 29px;
 	border-radius: 0px;
+}
+
+.guifan {
+	text-align: left;
+}
+
+#uploadform,
+#uploadform_gif,
+#uploadform_pre {
+	margin-left: 160px;
 }
 
 
@@ -59,7 +107,7 @@ div.fieldset span.legend {
 }
 
 div.flash {
-	width: 375px;
+	width: 355px;
 	border-color: #D9E4FF;
 	border-radius: 0px;
 	box-shadow: 0 0 30px #eee;
@@ -157,8 +205,8 @@ a.progressCancel:hover {
 .pack {
 	width: 120px;
 	height: 36px;
-	box-shadow: 0 0 5px #ccc;
-	border-radius: 8px;
+	box-shadow: 0 0 5px #eee;
+	border-radius: 0px;
 	background-color: cornflowerblue;
 	color: aliceblue;
 }
