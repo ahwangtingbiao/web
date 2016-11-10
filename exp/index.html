@@ -3,6 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
+	<script>
+		//清理图片缓存
+		window.open('reset.php');
+
+	</script>
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
 	<title>讯飞输入法表情包在线制作工具</title>
 	<link rel="icon" href="http://www.xunfei.cn/favicon.ico" type="image/x-icon" />
@@ -152,8 +157,6 @@
 		var preu;
 
 		window.onload = function() {
-			//清理图片缓存
-			window.open('reset.php', '清除图片缓存', 'width=1px,height=1px,titlebar=no,status=no,location=no,directories=no,top=11110px');
 
 			var settings = {
 				flash_url: "swfupload/swfupload.swf",
