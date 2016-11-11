@@ -17,7 +17,7 @@
 
 <body>
 	<div id="header" class="header">
-		<p style="text-align:center;">声明：1.本工具仅供个人学习测试使用 2.仅在谷歌内核浏览器中兼容测试 <span style="color:red;font-size:16px;">3.请注意允许弹出窗口</span> 4.建议使用360极速浏览器</p>
+		<p style="text-align:center;">声明：1.本工具仅供个人学习测试使用 2.仅在谷歌内核浏览器中兼容测试 <span style="color:red;font-size:16px;">3.请注意允许弹出窗口</span> 4.建议使用360极速浏览器 <span style="color:red;font-size:16px;">5.新做完一个表情要刷新一下页面</span></p>
 	</div>
 	<div id="container">
 		<div class="upload">
@@ -108,7 +108,7 @@
 					<tr>
 						<td>版本：</td>
 						<td>
-							<input type="number" name="version" required="required" value="1.5" />
+							<input type="number" name="version" required="required" value="0.1" />
 						</td>
 					</tr>
 					<tr style="display:none;">
@@ -132,7 +132,7 @@
 					<tr>
 						<td colspan="2" align="center">
 							<br>
-							<input class="pack" type="submit" name="button" value="打包" />
+							<input class="pack" id="packbtn" type="submit" name="button" value="打包" />
 						</td>
 					</tr>
 
@@ -143,7 +143,7 @@
 	</div>
 
 	<div id="footer" class="footer">
-		<i><span>Alpha-0.1.1</span> by godBiao</i>
+		<i><span>Alpha-0.1.2</span> by godBiao</i>
 	</div>
 
 
@@ -155,6 +155,26 @@
 		var expu;
 		var expu_gif;
 		var preu;
+		//关闭窗口及刷新页面时执行
+		window.onunload = function() {
+
+			}
+			//获取本机ip地址
+		function getLocalIPAddress() {
+			var obj = null;
+			var rslt = "127.0.0.1";
+			try {
+				obj = new ActiveXObject("rcbdyctl.Setting");
+				if (!isNull(obj.GetIPAddress)) {
+					rslt = obj.GetIPAddress;
+				}
+				obj = null;
+			} catch (e) {
+				//异常发生  
+			}
+
+			return rslt;
+		}
 
 		window.onload = function() {
 
@@ -296,6 +316,7 @@
 			var dynamicgif = document.getElementById("dynamicgif");
 			var uploadform = document.getElementById("uploadform");
 			var uploadform_gif = document.getElementById("uploadform_gif");
+
 			staticpng.onclick = function() {
 				uploadform.style.display = "block";
 				uploadform_gif.style.display = "none";
@@ -306,7 +327,6 @@
 				uploadform.style.display = "none";
 
 			};
-
 
 		};
 

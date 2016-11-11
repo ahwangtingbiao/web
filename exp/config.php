@@ -1,9 +1,10 @@
 <?php
-$updir = 'tmp/up/';//定义表情主图上传目录
-$updir_pre = 'tmp/up_pre/';//定义聊天面板图目录
-
-//$num = $_POST['num'];//表情个数
-$num = count(scandir($updir))-2;
+$ip = $_SERVER["REMOTE_ADDR"];
+$updir = $ip.'/up/';//定义表情主图上传目录
+$updir_pre =$ip.'/up_pre/';//定义聊天面板图目录
+if(file_exists($updir)){
+$num = count(scandir($updir))-2;	
+}
 $name = $_POST['name'];
 $version = $_POST['version'];
 $description = $_POST['description'];

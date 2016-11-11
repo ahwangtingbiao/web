@@ -20,7 +20,7 @@ createDir($qqdir_land);//创建目录
 createDir($qqres);//创建目录
 createDir($wxdir);//创建目录
 createDir($wxdir_land);//创建目录
-write_ini_file($qq_expression, $qqdir.'expression.ini', true);
+write_ini_file($qq_expression, $qqdir.'expression.ini', true); 
 write_ini_file($qq_expression_land, $qqdir_land.'expression.ini', true);
 write_ini_file($wx_expression, $wxdir.'expression.ini', true);
 write_ini_file($wx_expression_land, $wxdir_land.'expression.ini', true);
@@ -37,7 +37,7 @@ unlink($filename);//删除文件
 delDir($rootdir);//删除目录
 
 //数据处理结束
-
-	
+ 
+ 
 
 ?>
