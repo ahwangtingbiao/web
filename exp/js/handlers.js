@@ -225,6 +225,11 @@ function queueComplete(numFilesUploaded) {
 	status.innerHTML = numFilesUploaded + " 个表情已上传，继续上传，相同的文件名的表情将会被覆盖<br>若刷新页面，全部都需要重新来过";
 }
 
+function queueComplete_gif(numFilesUploaded) {
+	var status = document.getElementById("divStatus_gif");
+	status.innerHTML = numFilesUploaded + " 个表情已上传，继续上传，相同的文件名的表情将会被覆盖<br>若刷新页面，全部都需要重新来过";
+}
+
 function queueComplete_pre(numFilesUploaded) {
 	var status = document.getElementById("divStatus_pre");
 	status.innerHTML = "缩略图已上传，继续上传将会被覆盖<br>若刷新页面，全部都需要重新来过";
