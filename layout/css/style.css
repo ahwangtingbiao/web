@@ -8,8 +8,8 @@ body {
 }
 
 @font-face {
-	font-family: godbiao;
-	src: url('font.ttf') format('ttf');
+	font-family: godbiao1;
+	src: url('./css/font.ttf') format('ttf');
 }
 
 #container {
@@ -18,12 +18,20 @@ body {
 	height: 550px;
 	margin: 0 auto;
 	text-align: center;
-	border: 1px solid #666;
+	border: 1px solid #ccc;
 	margin-top: 50px;
+	box-shadow: 0 0 50px #ccc;
 }
 
 ul {
 	list-style: none;
+}
+
+li {
+	transition: transform 0.1s linear, opacity;
+	-webkit-transition: transform 0.1s linear;
+	-moz-transition: transform 0.1s linear;
+	-o-transition: transform 0.1s linear;
 }
 
 #center,
@@ -38,7 +46,7 @@ ul {
 .cand {
 	width: 100%;
 	height: 90px;
-	background-color: red;
+	background-color: aquamarine;
 }
 
 .cand {
@@ -51,7 +59,7 @@ ul {
 	width: 119px;
 	height: 90px;
 	line-height: 90px;
-	background-color: #666;
+	background-color: #ccc;
 	color: #fff;
 	font-size: 30px;
 }
@@ -60,7 +68,7 @@ ul {
 /*自定义符号*/
 
 .left {
-	background-color: green;
+	background-color: azure;
 }
 
 .comb {
@@ -85,7 +93,7 @@ ul {
 #center {
 	width: 490px;
 	height: 460px;
-	background-color: blue;
+	background-color: bisque;
 }
 
 .center ul {
@@ -100,18 +108,15 @@ ul {
 	line-height: 115px;
 	background-color: #fff;
 	font-size: 35px;
-	font-family: 'godbiao';
+	font-family: 'godbiao1';
 	box-sizing: border-box;
-	border: 1px solid #000;
+	border: 1px solid #ccc;
 	border-radius: 12px;
-	transition: transform 0.1s linear;
-	-webkit-transition: transform 0.1s linear;
-	-moz-transition: transform 0.1s linear;
-	-o-transition: transform 0.1s linear;
 }
 
 li:active {
 	transform: scale(1.5) translateY(-30px);
+	opacity: 0.5;
 	-webkit-transform: scale(1.5) translateY(-30px);
 	-moz-transform: scale(1.5) translateY(-30px);
 	-o-transform: scale(1.5) translateY(-30px);
@@ -121,7 +126,7 @@ li:active {
 /*右边*/
 
 #right {
-	background-color: yellow;
+	background-color: beige;
 }
 
 .right ul {
