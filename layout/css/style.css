@@ -1,0 +1,127 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #fff;
+}
+
+@font-face {
+	font-family: godbiao;
+	src: url('./font.ttf') format('ttf');
+}
+
+#container {
+	background-color: #ccc;
+	width: 720px;
+	height: 550px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #666;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+}
+
+#center,
+#left,
+#right {
+	float: left;
+}
+
+
+/*工具栏*/
+
+.cand {
+	width: 100%;
+	height: 90px;
+	background-color: red;
+}
+
+.cand {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.cand li {
+	width: 119px;
+	height: 90px;
+	line-height: 90px;
+	background-color: #666;
+	color: #fff;
+	font-size: 30px;
+}
+
+
+/*自定义符号*/
+
+.left {
+	background-color: green;
+}
+
+.comb {
+	width: 115px;
+	height: 460px;
+	display: inline-flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+.comb li {
+	width: 115px;
+	height: 91px;
+	line-height: 91px;
+	background-color: #fff;
+	font-size: 30px;
+}
+
+
+/*中间*/
+
+#center {
+	width: 490px;
+	height: 460px;
+	background-color: blue;
+}
+
+.center ul {
+	display: inline-flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.center ul li {
+	width: 162px;
+	height: 115px;
+	line-height: 115px;
+	background-color: #fff;
+	font-size: 35px;
+	font-family: 'godbiao';
+}
+
+
+/*右边*/
+
+#right {
+	background-color: yellow;
+}
+
+.right ul {
+	width: 115px;
+	height: 460px;
+	display: inline-flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+.right ul li {
+	width: 115px;
+	height: 114px;
+	line-height: 114px;
+	background-color: #fff;
+	font-size: 30px;
+}
