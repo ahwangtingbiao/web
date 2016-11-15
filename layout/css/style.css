@@ -9,7 +9,7 @@ body {
 
 @font-face {
 	font-family: godbiao;
-	src: url('./font.ttf') format('ttf');
+	src: url('font.ttf') format('ttf');
 }
 
 #container {
@@ -95,12 +95,26 @@ ul {
 }
 
 .center ul li {
-	width: 162px;
+	width: 163.33px;
 	height: 115px;
 	line-height: 115px;
 	background-color: #fff;
 	font-size: 35px;
 	font-family: 'godbiao';
+	box-sizing: border-box;
+	border: 1px solid #000;
+	border-radius: 12px;
+	transition: transform 0.1s linear;
+	-webkit-transition: transform 0.1s linear;
+	-moz-transition: transform 0.1s linear;
+	-o-transition: transform 0.1s linear;
+}
+
+li:active {
+	transform: scale(1.5) translateY(-30px);
+	-webkit-transform: scale(1.5) translateY(-30px);
+	-moz-transform: scale(1.5) translateY(-30px);
+	-o-transform: scale(1.5) translateY(-30px);
 }
 
 
