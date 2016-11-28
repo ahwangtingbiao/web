@@ -1,6 +1,6 @@
 array (
   'dirname' => '.',
-  'basename' => '2.gif',
-  'extension' => 'gif',
-  'filename' => '2',
+  'basename' => 'preview.png',
+  'extension' => 'png',
+  'filename' => 'preview',
 )
