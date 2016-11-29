@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="http://www.xunfei.cn" target="_blank" title="还没做好"><img class="logoimg" src="res/logo.png" alt=""></a>
+				<a class="navbar-brand" href="http://www.xunfei.cn" target="_blank" title="点击进入讯飞输入法官网"><img class="logoimg" src="res/logo.png" alt="我是LOGO"></a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
@@ -34,7 +34,8 @@
 
 		<div class="jumbotron">
 			<h2>讯飞输入法</h2>
-			<p>讯飞输入法，1分钟400字，语音输入带你飞！讯飞输入法不仅语音准确、手写快捷、输入流畅，还有海量精美皮肤、卖萌表情、可爱颜文字，是你必备的手机输入法。 </p>
+			<p id="src" style="display:none;">讯飞输入法，1分钟400字，语音输入带你飞！讯飞输入法不仅语音准确、手写快捷、输入流畅，还有海量精美皮肤、卖萌表情、可爱颜文字，是你必备的手机输入法。 </p>
+			<p><span id="des"></span><span class="typing-cursor">|</span></p>
 			<p><a href="http://xunfei.cn/a" class="btn btn-primary btn-default" role="button">下载最新版 »</a></p>
 		</div>
 
@@ -246,7 +247,11 @@
 				
 				.ds-replybox {
 					margin-top: 10px!important;
-					padding-left: 10px!important;
+					padding-left: 5px!important;
+				}
+				
+				.ds-comment-body {
+					padding-left: 5px!important;
 				}
 
 			</style>
@@ -255,12 +260,39 @@
 	</div>
 	<div class="footer">
 		<div class="container">
-			<p class="text-muted"><i><span>Alpha-0.0.1</span> by godBiao</i></p>
+			<p class="text-muted"><i>Powered by godBiao <span>i1</span></i></p>
 		</div>
 	</div>
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/tether.min.js"></script>
 	<script src="bs3/js/bootstrap.min.js"></script>
+
+	<!--打字机效果开始-->
+	<link rel="stylesheet" href="js/typing.css">
+	<script src="js/typing.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var typing = new Typing({
+				source: document.getElementById('src'),
+				output: document.getElementById('des'),
+				delay: 60,
+				done: function() {
+					console.log(this);
+					console.log('done')
+				}
+			});
+
+			typing.start();
+		}
+
+	</script>
+	<style>
+		.typing-cursor {
+			font-weight: 300;
+		}
+
+	</style>
+	<!--打字机效果开始-->
 </body>
 
 </html>
