@@ -44,6 +44,11 @@ body {
 
 /*bootstrap3*/
 
+.navbar-default {
+	background-color: #fefefe;
+	border-color: #eee;
+}
+
 .badge {
 	position: relative;
 	float: right;
@@ -57,4 +62,10 @@ body {
 
 .jumbotron {
 	padding: 20px;
+	transition: box-shadow .2s linear, transform .3s linear;
+}
+
+.jumbotron:hover {
+	box-shadow: 0 0 20px #ccc;
+	transform: translateY(10px);
 }
