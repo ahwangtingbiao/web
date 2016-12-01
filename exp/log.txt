@@ -1,6 +1,0 @@
-array (
-  'dirname' => '.',
-  'basename' => 'preview.png',
-  'extension' => 'png',
-  'filename' => 'preview',
-)
